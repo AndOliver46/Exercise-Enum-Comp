@@ -42,9 +42,16 @@ public class OrderItem {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-	
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append(product.getName() + ", $");
+		builder.append(String.format("%.2f", price) + ", ");
+		builder.append("Quantity: ");
+		builder.append(quantity + ", ");
+		builder.append("Subtotal: $");
+		builder.append(subTotal());
+		return builder.toString();
+	}
 }
