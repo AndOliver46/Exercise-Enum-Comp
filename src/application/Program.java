@@ -17,7 +17,6 @@ public class Program {
 	public static void main(String[] args) throws ParseException {
 
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		Date date = new Date();
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
@@ -37,10 +36,10 @@ public class Program {
 		System.out.print("How many items to this order: ");
 		int itemsToOrder = sc.nextInt();
 		
-		Order order = new Order(date, status, client);
+		Order order = new Order(new Date(), status, client);
 		
 		for(int i=0; i < itemsToOrder; i++) {
-			System.out.println("\nEnter #" + (0 + i) + " item data: ");
+			System.out.println("\nEnter #" + (1 + i) + " item data: ");
 			System.out.print("Product name: ");
 			sc.nextLine();
 			String productName = sc.nextLine();

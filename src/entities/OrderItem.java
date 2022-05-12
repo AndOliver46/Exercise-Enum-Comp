@@ -51,7 +51,7 @@ public class OrderItem {
 		builder.append("Quantity: ");
 		builder.append(quantity + ", ");
 		builder.append("Subtotal: $");
-		builder.append(subTotal());
+		builder.append(String.format("%.2f", subTotal()));
 		return builder.toString();
 	}
 }
